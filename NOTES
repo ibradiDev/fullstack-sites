@@ -1,0 +1,12 @@
+// MongoDB connection string
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://ibrahim:<password>@fullstack-mern.xmkisss.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+//  password
+iS3JzVvOGIeQnmKW
